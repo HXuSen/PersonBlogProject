@@ -2,6 +2,7 @@ package com.hxsstu.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hxsstu.domain.ResponseResult;
+import com.hxsstu.domain.dto.LinkDto;
 import com.hxsstu.domain.entity.Link;
 
 
@@ -14,5 +15,13 @@ import com.hxsstu.domain.entity.Link;
 public interface LinkService extends IService<Link> {
 
     ResponseResult getAllLink();
+
+    ResponseResult linkList(Integer pageNum, Integer pageSize, LinkDto linkDto);
+
+    ResponseResult addLink(LinkDto linkDto);
+
+    ResponseResult getLinkById(Long id);
+
+    ResponseResult updateLinkById(LinkDto linkDto);
 }
 

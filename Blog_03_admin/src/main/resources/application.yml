@@ -1,0 +1,30 @@
+server:
+  port: 8989
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/person_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  redis:
+    host: 8.130.101.254
+    port: 6379
+    password: hxsstu
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+oss:
+  accessKey: 2YNZbCgbvCkIt2oLLSdDhBRyeHunmHhzl0WY_1oZ
+  secretKey: p97I9hoDuWqMz29j9o_ilLQ02AUvdikJ_Qh0g4Lu
+  bucket: blog-hxs
+  domain: http://rzpxn4tff.hn-bkt.clouddn.com

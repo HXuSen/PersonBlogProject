@@ -2,6 +2,7 @@ package com.hxsstu.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hxsstu.domain.ResponseResult;
+import com.hxsstu.domain.dto.ArticleDto;
 import com.hxsstu.domain.entity.Article;
 
 /**
@@ -18,4 +19,12 @@ public interface ArticleService extends IService<Article> {
     ResponseResult articleList(Integer pageNum, Integer pageSize, Long categoryId);
 
     ResponseResult getArticleDetail(Long id);
+
+    ResponseResult addArticle(ArticleDto articleDto);
+
+    ResponseResult articleListAdmin(Integer pageNum, Integer pageSize, ArticleDto articleListDto);
+
+    ResponseResult getArticleById(Long id);
+
+    ResponseResult updateArticle(ArticleDto updateArticleDto);
 }
